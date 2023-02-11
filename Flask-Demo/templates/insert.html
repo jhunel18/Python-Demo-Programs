@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Books</title>
+    </head>
+<body>
+    <h1>Add Book</h1>
+    <form action="{{url_for('insert_data')}}" method="POST">
+        <label>Title </label>
+        <input type = "text" id = "title" name = "title">
+        <br>
+        <label>Author </label>
+        <input type = "text" id = "author" name = "author">
+        <br>
+        <label>Year Published </label>
+        <input type = "text" id = "year_published" name = "year_published">
+        <br>
+        <label>Number of Pages </label>
+        <input type = "text" id = "num_pages" name = "num_pages">
+        <br>
+        <input type = "submit" value = "Submit">
+    </form>
+</body>
+</html>

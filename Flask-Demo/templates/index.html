@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <<link href= "{{url_for('static', filename = 'css/style.css')}}", rel= "stylesheet">
+    </head>
+<body>
+    <h1>Book Management System</h1>
+    <a href = "/insert">Add Book</a>
+    <table id = "books_tbl">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+            <th>Number of Pages</th>
+            <th>Action</th>
+        </tr>
+        <!-- <tr>
+            <td>A Tale of Two Cities</td>
+            <td>Charles Dickens</td>
+            <td>1878</td>
+            <td>256</td>
+        </tr> -->
+        {% for row in books%}
+        <tr>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+            <td>
+                <a href = "delete">Delete</a>
+                <a href = "update">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

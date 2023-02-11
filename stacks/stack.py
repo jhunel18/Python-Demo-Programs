@@ -27,31 +27,23 @@ class Stack:
         return self.stack
     
 #Create object of the Stack
-
-stackStudent = Stack()
-
+product  = Stack()
+price = Stack()
 
 while True:
-    choice = input('Enter your choice: ')
 
-    if choice == "0":
-        print("You exit.")
-        break
-    elif choice == '1':
-        value = input("Enter the value you want to add: ")
-        stackStudent.add(value)
-        continue
-    elif choice == '2':
-        print(stackStudent.peek())
-        continue
-    elif choice == '3':
-        stackStudent.remove()
-        continue
-    elif choice == '4':
-        print(stackStudent.view())
-        continue
-    else:
-        print("Invalid Input")
-        break
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        prod = input("Ente the product ")
+        p = float(input("Enter the price: "))
 
-
+        product.add(prod)
+        price.add(p)
+    elif choice == 2:
+        print(product.view())
+        print(price.view())
+    
+    elif choice == 3:
+        product.remove()
+        price.remove()
+    
