@@ -1,0 +1,1 @@
+CREATE DATABASE users_db and create table using the create_db file.
