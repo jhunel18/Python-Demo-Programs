@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <link href= "{{url_for('static', filename = 'css/styles.css')}}", rel= "stylesheet">
+    </head>
+<body>
+    <h1 class = "big-text">Inventory Management System</h1>
+    <div class = "wrapper">
+        <button class = "btn" type = "button">
+            <a href = "/add">Add Product</a>
+        </button>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+            {% for row in products %}
+            <tr>
+               <td>{{row.1}}</td>
+               <td>{{row.2}}</td>
+               <td>{{row.3}}</td>
+               <td>
+                <a href ="/update/{{row.0}}">Update</a>
+                <a href = "/delete/{{row.0}}" onclick="return confirm('Delete?')">Delete</a>
+               </td>
+            </tr>
+            {% endfor %}
+           
+        </table>
+    </div>
+</body>
+</html>

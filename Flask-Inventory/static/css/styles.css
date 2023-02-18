@@ -1,0 +1,7 @@
+h1.big-text {
+    color: red;
+    font-family: cursive;
+}
+table, th, td {
+    border: 1px solid black;
+}

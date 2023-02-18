@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Product</title>
+    </head>
+<body>
+    <h1>Edit Product Information</h1>
+    <form action="{{url_for('update_data')}}" method="POST">
+        <label> Name </label>
+        <input type = "hidden" name = "id" value = {{products.0}}>
+        <input type = "text" name = "name" id = "id" value={{products.1}}>
+        <br />
+        <label>Description </label>
+        <input type = "text" name = "description" id = "description" name = "description" value={{products.2}}>
+        <br />
+        <label>Quantity</label>
+        <input type = "text" name = "qty" id="qty" value = {{products.3}}>
+        <br />
+        <input type = "submit" value = "Update" />
+    </form>
+</body>
+</html>
